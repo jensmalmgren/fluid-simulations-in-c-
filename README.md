@@ -1,6 +1,5 @@
 # How about making a program doing fluid simulations?
-![image](https://github.com/jensmalmgren/fluid-simulations-in-c-/assets/20211468/0db24f7b-7bb0-48b1-813d-595dee767d34)
-As the title says, would it not be cool to reproduce fluid simulations in your computer program? I am not good at math, so I started googling for examples of how to do this. I knew it had to run on c# because I wanted the simulation integrated into an existing c# program.
+<img align = "right" src = "https://github.com/jensmalmgren/fluid-simulations-in-csharp/assets/20211468/0db24f7b-7bb0-48b1-813d-595dee767d34">As the title says, would it not be cool to reproduce fluid simulations in your computer program? I am not good at math, so I started googling for examples of how to do this. I knew it had to run on c# because I wanted the simulation integrated into an existing c# program.
 
 I found Mattias Muller at Ten Minute Physics; he knows about math. He made a [YouTube movie](https://www.youtube.com/watch?v=iKAVRgIrUOU) about the subject and published the source code on GitHub, so from that perspective, I had all the ingredients for porting his code into c#. He wrote his code in JavaScript. He made a big deal out of being able to produce the simulation from just 200 lines of code. In my situation, that was absolutely nothing I cared about; besides that, I put begin curly braces on their own line of code to make the code more readable, so I am losing the line count battle anyway.
 
