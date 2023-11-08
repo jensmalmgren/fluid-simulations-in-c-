@@ -92,7 +92,7 @@ namespace FluidSimulationJosStam
 	{
 		public static int NX = 100;
 		public static int NY = 100;
-		public static int iter = 20;
+		public static int iter = 4;
 		public static int displayScale = 6;
 		public static int angle = 0;
 		public static float dt = 0.01f;
@@ -102,8 +102,6 @@ namespace FluidSimulationJosStam
 		{
 			return (value < min) ? min : (value > max) ? max : value;
 		}
-
-		public static bool m_bTraceArray = false;
 	}
 
 	public enum Boundary
@@ -162,8 +160,8 @@ namespace FluidSimulationJosStam
 
 		public int IX(int x, int y)
 		{
-			return x + y * (fa.NY + 2);
-		} // IX()
+			return x + y * (fa.NX + 2);
+		}
 
 		public void add_velocity(int x, int y, float amountX, float amountY)
 		{
@@ -245,7 +243,7 @@ namespace FluidSimulationJosStam
 				}
 			}
 			set_bnd(b, d);
-		} // advect
+		}
 
 		public void add_source(float[] x, float[] s)
 		{
@@ -287,7 +285,7 @@ namespace FluidSimulationJosStam
 			set_bnd(0, div);
 			set_bnd(0, p);
 
-			for (int k = 0; k < 20; k++)
+			for (int k = 0; k < fa.iter; k++)
 			{
 				for (int i = 1; i <= fa.NX; i++)
 				{
@@ -332,7 +330,7 @@ namespace FluidSimulationJosStam
 			x[IX(fa.NX + 1, fa.NY + 1)] = 0.5f * (x[IX(fa.NX    , fa.NY + 1)] + x[IX(fa.NX + 1, fa.NY    )]);
 		} // set_bnd()
 
-	} // class FluidCube
+	}
 
 	public class DrawPanel : Panel
 	{
@@ -345,4 +343,4 @@ namespace FluidSimulationJosStam
 		{
 		}
 	}
-} // FluidSimulationAsh
+}
