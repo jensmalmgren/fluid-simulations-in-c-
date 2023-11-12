@@ -28,3 +28,5 @@ I introduced a flow similar to how Daniel from the CodeTrain did it. I also foun
 When changing the grid size, you influence the workings of the diffusion, and I'm not too fond of that in Jos Stam's code, but I can live with that.
 
 As I said, there are thousands of values, and it is challenging to only understand what is going on by looking at floating-point numbers. So, if you have a system that works, you can start playing around with it and learn more about it. So that is the meaning of this program. 350+ lines of code, which is not bad.
+
+Here is a beautiful and informative video about fluid simulations explaining the math behind it all, and especially the math behind Jos Stams version of fluid simulations: https://www.youtube.com/watch?v=qsYE1wMEMPA
